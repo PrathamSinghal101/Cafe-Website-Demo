@@ -1,0 +1,421 @@
+/* =====================
+   ROOT VARIABLES
+===================== */
+:root {
+  --bg-dark: #1b120e;
+  --bg-light: #241914;
+  --coffee: #c9a36a;
+  --text-main: #f5f1ee;
+  --text-muted: #cfc6bf;
+  --border-soft: rgba(255,255,255,0.15);
+  --radius: 14px;
+}
+
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* =====================
+   TOP BAR
+===================== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+  background: #120b08;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  background: rgba(27,18,14,0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: none;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.nav-links a:hover {
+  color: var(--coffee);
+}
+
+.menu-toggle {
+  font-size: 24px;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    ),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836") center/cover;
+}
+
+.hero-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  max-width: 520px;
+  margin: 0 auto 30px;
+  color: var(--text-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cta-primary,
+.cta-secondary {
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.cta-primary {
+  background: var(--coffee);
+  color: #1b120e;
+}
+
+.cta-secondary {
+  border: 1px solid var(--coffee);
+}
+
+/* =====================
+   SECTION BASE
+===================== */
+section {
+  padding: 70px 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* =====================
+   ABOUT
+===================== */
+.about-wrapper {
+  display: grid;
+  gap: 40px;
+}
+
+.about-text h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.about-highlights {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.about-highlights li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.image-placeholder {
+  background: var(--bg-light);
+  height: 260px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+/* =====================
+   MENU
+===================== */
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.menu-categories button {
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+}
+
+.menu-categories button:hover {
+  color: var(--coffee);
+  border-color: var(--coffee);
+}
+
+.menu-list {
+  display: grid;
+  gap: 24px;
+}
+
+.menu-item {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.menu-item h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.menu-item p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.price {
+  display: block;
+  margin-top: 14px;
+  font-weight: 500;
+  color: var(--coffee);
+}
+
+/* =====================
+   GALLERY
+===================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.gallery-item .image-placeholder {
+  height: 180px;
+}
+
+/* =====================
+   REVIEWS
+===================== */
+.reviews-list {
+  display: grid;
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  padding: 26px;
+  font-size: 14px;
+}
+
+.review-card p {
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+/* =====================
+   CONTACT
+===================== */
+.contact-details {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-muted);
+}
+
+.map-placeholder {
+  height: 260px;
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background: #120b08;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer a {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--coffee);
+}
+
+/* =====================
+   TABLET (≥768px)
+===================== */
+@media (min-width: 768px) {
+  .hero-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .about-wrapper {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .menu-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reviews-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================
+   DESKTOP (≥1024px)
+===================== */
+@media (min-width: 1024px) {
+  section {
+    padding: 100px 80px;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reviews-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-content h2 {
+    font-size: 56px;
+  }
+}
+
+/* =====================
+   SCROLL REVEAL
+===================== */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================
+   MOBILE NAV OPEN
+===================== */
+.nav-links.nav-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #1b120e;
+  padding: 20px;
+  border-radius: 12px;
+  gap: 16px;
+}
+.nav-links.nav-open a {
+  font-size: 16px;
+}
